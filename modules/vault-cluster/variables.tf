@@ -80,6 +80,12 @@ variable "cluster_tag_key" {
   default     = "Name"
 }
 
+variable "cluster_extra_tags" {
+  description = "A list of additional tags to add to each Instance in the ASG."
+  type = "list"
+  default = []
+}
+
 variable "termination_policies" {
   description = "A list of policies to decide how the instances in the auto scale group should be terminated. The allowed values are OldestInstance, NewestInstance, OldestLaunchConfiguration, ClosestToNextInstanceHour, Default."
   default     = "Default"
